@@ -79,7 +79,7 @@ export default [
     playgroundURL: "https://playground.solidjs.com/",
     documentationURL: "https://www.solidjs.com/",
     filesSorter(files) {
-      return sortAllFilenames(files, ["App.jsx"]);
+      return sortAllFilenames(files, ["index.html", "App.jsx"]);
     },
   },
   {
@@ -108,6 +108,19 @@ export default [
     documentationURL: "https://qwik.builder.io/docs/overview",
     filesSorter(files) {
       return sortAllFilenames(files, ["index.html", "App.tsx"]);
+    },
+  },
+  {
+    id: "marko",
+    title: "Marko",
+    img: "framework/marko.svg",
+    eslint: {
+      files: ["!**"], // Marko’s linter/prettyprinter doesn’t use eslint
+    },
+    playgroundURL: "https://markojs.com/playground/",
+    documentationURL: "https://markojs.com/docs/getting-started/",
+    filesSorter(files) {
+      return sortAllFilenames(files, ["index.marko", "App.marko"]);
     },
   },
   {
